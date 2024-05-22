@@ -3,6 +3,7 @@ body {
     color: #222;
   }
   
+  /* Used grid to arrange the cards into 2 columns and 2 rows */
   .emojis {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -13,11 +14,36 @@ body {
     border: 1px solid #222;
     border-radius: 8px;
     padding: 1rem;
+    display: flex;
+    /* to make child arranged vertically */
+    flex-direction: column;
+    /* to align content horizontal */
+    align-items: center; 
+
+  }
+  
+  .emoji .icon {
+    font-size: 4rem;
+    /* to put emoji icon on top order */
+    order: 1; 
   }
   
   .emoji h2 {
     margin: 0;
     border-bottom: 2px solid #ccc;
+    /* to put heading in 2nd order */
+    order: 2; 
+    /* to align card text left */
+    text-align: left; 
+    /* to stretch and occupy available width  */
+    width: 100%; 
+  }
+  
+  .emoji p {
+    /* to put paragraph in 3rd order */
+    order: 3; 
+    text-align: left;
+    width: 100%; 
   }
   
   .emoji a {
@@ -26,8 +52,14 @@ body {
     color: white;
     padding: 1rem;
     border-radius: 8px;
+    /* to put anchor on the bottom of the card content order */
+    order: 4; 
+    /* to stretch the width of the button */
+    align-self: stretch;
+    /* to align button text left */
+    text-align: left;
+    /* to align the anchor to the bottom of the card */
+    margin-top: auto; 
   }
+
   
-  .icon {
-    font-size: 4rem;
-  }

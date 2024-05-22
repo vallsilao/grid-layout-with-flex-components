@@ -3,6 +3,12 @@ body {
     color: #222;
   }
   
+  .emojis {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
   .emoji {
     border: 1px solid #222;
     border-radius: 8px;
